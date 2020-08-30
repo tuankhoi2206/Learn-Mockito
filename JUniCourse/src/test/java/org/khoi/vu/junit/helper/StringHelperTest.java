@@ -3,12 +3,19 @@ package org.khoi.vu.junit.helper;
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.khoi.vu.JUniCourse.StringHelper;
 
 public class StringHelperTest {
 
   StringHelper helper;
+
+  @BeforeClass
+  public static void beforeClass() {
+    System.out.println("Before Class");
+    System.out.println("Some database connections or thing like that....");
+  }
 
   @Before
   public void setup() {
